@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashBordController">
+   <children>
+      <Pane layoutX="71.0" layoutY="79.0" prefHeight="107.0" prefWidth="114.0">
+         <children>
+            <ImageView fx:id="student" fitHeight="86.0" fitWidth="98.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-student-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="232.0" layoutY="79.0" prefHeight="107.0" prefWidth="114.0">
+         <children>
+            <ImageView fx:id="course" fitHeight="86.0" fitWidth="98.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-books-emoji-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="400.0" layoutY="79.0" prefHeight="107.0" prefWidth="114.0">
+         <children>
+            <ImageView fx:id="transaction" fitHeight="86.0" fitWidth="98.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-transfer-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="572.0" layoutY="79.0" prefHeight="107.0" prefWidth="114.0">
+         <children>
+            <ImageView fx:id="settings" fitHeight="86.0" fitWidth="98.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-settings-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="671.0" layoutY="331.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icons8-logout-50.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblmenu" layoutX="368.0" layoutY="248.0" />
+      <Label fx:id="lbldesc" layoutX="369.0" layoutY="298.0" prefHeight="17.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>
