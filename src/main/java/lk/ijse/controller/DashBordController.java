@@ -87,20 +87,20 @@ public class DashBordController {
             ImageView icon = (ImageView) event.getSource();
 
             switch (icon.getId()) {
-                case "user":
-                    lblmenu.setText("Manage Users");
+                case "student":
+                    lblmenu.setText("Student");
                     lbldesc.setText("Click to add, edit, delete, search or view Users");
                     break;
-                case "book":
-                    lblmenu.setText("Manage  Books");
+                case "course":
+                    lblmenu.setText("Course");
                     lbldesc.setText("Click to add, edit, delete, search or view Books");
                     break;
                 case "transaction":
                     lblmenu.setText("Transaction");
                     lbldesc.setText("Click here if you want to Transaction");
                     break;
-                case "setting":
-                    lblmenu.setText("Setting");
+                case "settings":
+                    lblmenu.setText("Settings");
                     lbldesc.setText("Click if you want to change password");
                     break;
             }
@@ -111,7 +111,7 @@ public class DashBordController {
             scaleT.play();
 
             DropShadow glow = new DropShadow();
-            glow.setColor(Color.CORNFLOWERBLUE);
+            glow.setColor(Color.SLATEBLUE);
             glow.setWidth(20);
             glow.setHeight(20);
             glow.setRadius(20);
