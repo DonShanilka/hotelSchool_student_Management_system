@@ -1,18 +1,20 @@
 package lk.ijse.controller;
 
+import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.scene.paint.Color;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class DashBordController {
@@ -81,7 +83,40 @@ public class DashBordController {
 
     @FXML
     void playMouseEnterAnimation(MouseEvent event) {
+        if (event.getSource() instanceof ImageView) {
+            ImageView icon = (ImageView) event.getSource();
 
+            switch (icon.getId()) {
+                case "user":
+                    lblmenu.setText("Manage Users");
+                    lbldesc.setText("Click to add, edit, delete, search or view Users");
+                    break;
+                case "book":
+                    lblmenu.setText("Manage  Books");
+                    lbldesc.setText("Click to add, edit, delete, search or view Books");
+                    break;
+                case "transaction":
+                    lblmenu.setText("Transaction");
+                    lbldesc.setText("Click here if you want to Transaction");
+                    break;
+                case "setting":
+                    lblmenu.setText("Setting");
+                    lbldesc.setText("Click if you want to change password");
+                    break;
+            }
+
+            ScaleTransition scaleT = new ScaleTransition(Duration.millis(200), icon);
+            scaleT.setToX(1.2);
+            scaleT.setToY(1.2);
+            scaleT.play();
+
+            DropShadow glow = new DropShadow();
+            glow.setColor(Color.CORNFLOWERBLUE);
+            glow.setWidth(20);
+            glow.setHeight(20);
+            glow.setRadius(20);
+            icon.setEffect(glow);
+        }
     }
 
     @FXML
