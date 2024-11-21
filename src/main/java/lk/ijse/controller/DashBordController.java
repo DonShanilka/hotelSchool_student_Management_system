@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -17,13 +18,13 @@ import java.io.IOException;
 public class DashBordController {
 
     @FXML
+    private ImageView course;
+
+    @FXML
     private Label lbldesc;
 
     @FXML
     private Label lblmenu;
-
-    @FXML
-    private ImageView course;
 
     @FXML
     private AnchorPane root;
@@ -87,5 +88,4 @@ public class DashBordController {
     void playMouseExitAnimation(MouseEvent event) {
 
     }
-
 }
