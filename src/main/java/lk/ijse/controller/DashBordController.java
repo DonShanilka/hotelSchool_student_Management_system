@@ -121,6 +121,16 @@ public class DashBordController {
 
     @FXML
     void playMouseExitAnimation(MouseEvent event) {
+        if (event.getSource() instanceof ImageView) {
+            ImageView icon = (ImageView) event.getSource();
+            ScaleTransition scaleT = new ScaleTransition(Duration.millis(200), icon);
+            scaleT.setToX(1);
+            scaleT.setToY(1);
+            scaleT.play();
 
+            icon.setEffect(null);
+            lblmenu.setText("Welcome");
+            lbldesc.setText("Please select one of above main operations to proceed");
+        }
     }
 }
